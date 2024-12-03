@@ -2,12 +2,12 @@ import React from 'react';
 import FazendaCard from '../components/FazendaCard';
 
 const fazendasMock = [
-  { id: 1, nome: "Fazenda Bela Vista", localizacao: "Ribeirão Preto, SP", preco: 5000000, imagemPrincipal: "https://via.placeholder.com/400x300" },
-  { id: 2, nome: "Rancho Dourado", localizacao: "Uberaba, MG", preco: 3500000, imagemPrincipal: "https://via.placeholder.com/400x300" },
-  { id: 3, nome: "Sítio Esperança", localizacao: "Campinas, SP", preco: 2000000, imagemPrincipal: "https://via.placeholder.com/400x300" },
-  { id: 4, nome: "Fazenda Horizonte", localizacao: "Goiânia, GO", preco: 7000000, imagemPrincipal: "https://via.placeholder.com/400x300" },
-  { id: 5, nome: "Estância Feliz", localizacao: "Cuiabá, MT", preco: 4500000, imagemPrincipal: "https://via.placeholder.com/400x300" },
-  { id: 6, nome: "Fazenda Primavera", localizacao: "Barretos, SP", preco: 6000000, imagemPrincipal: "https://via.placeholder.com/400x300" },
+  { id: 1, nome: "Fazenda Bela Vista", localizacao: "Ribeirão Preto, SP", preco: 5000000, imagemPrincipal: "/fazendas/1.jpg", width:"300", height:"400" },
+  { id: 2, nome: "Rancho Dourado", localizacao: "Uberaba, MG", preco: 3500000, imagemPrincipal: "/fazendas/4.jpg", width:"300", height:"400" },
+  { id: 3, nome: "Sítio Esperança", localizacao: "Campinas, SP", preco: 2000000, imagemPrincipal: "/fazendas/6.jpg", width:"300", height:"400" },
+  { id: 4, nome: "Fazenda Horizonte", localizacao: "Goiânia, GO", preco: 7000000, imagemPrincipal: "/fazendas/5.jpeg", width:"300", height:"400" },
+  { id: 5, nome: "Estância Feliz", localizacao: "Cuiabá, MT", preco: 4500000, imagemPrincipal: "/fazendas/7.jpg", width:"300", height:"400" },
+  { id: 6, nome: "Fazenda Primavera", localizacao: "Barretos, SP", preco: 6000000, imagemPrincipal: "/fazendas/8.webp", width:"300", height:"400" },
 ];
 
 const Catalogo = () => {

@@ -50,7 +50,7 @@ const Home = () => {
             </div>
             <div className="flex-1">
               <img
-                src="/placeholder.svg?height=400&width=600"
+                src="/imagens/sol.jpg?height=400&width=600"
                 alt="Campo ao pôr do sol"
                 className="w-full h-full object-cover rounded-lg"
               />
@@ -69,35 +69,23 @@ const Home = () => {
             <br />
             SERVIÇOS
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 justify-center items-center mx-auto max-w-4xlgrid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="bg-gray-100 rounded-lg overflow-hidden">
               <img
-                src="/placeholder.svg?height=200&width=300"
-                alt="M&A"
+                src="/imagens/Negocios.jpeg" alt="Negócios" width="300" height="400"
                 className="w-full h-48 object-cover"
               />
               <div className="p-4">
-                <h3 className="text-xl font-bold text-green-800">Fusões e Aquisições (M&A)</h3>
+                <h3 className="text-xl font-bold text-green-800">Venda De Proriedades</h3>
               </div>
             </div>
             <div className="bg-gray-100 rounded-lg overflow-hidden">
               <img
-                src="/placeholder.svg?height=200&width=300"
-                alt="Banco de Terras"
+                src="/imagens/avaliar.webp" alt="Avaliação" width="300" height="400"
                 className="w-full h-48 object-cover"
               />
               <div className="p-4">
-                <h3 className="text-xl font-bold text-green-800">Banco de Terras</h3>
-              </div>
-            </div>
-            <div className="bg-gray-100 rounded-lg overflow-hidden">
-              <img
-                src="/placeholder.svg?height=200&width=300"
-                alt="Desenvolvimento"
-                className="w-full h-48 object-cover"
-              />
-              <div className="p-4">
-                <h3 className="text-xl font-bold text-green-800">Desenvolvimento de Projetos</h3>
+                <h3 className="text-xl font-bold text-green-800">Avaliação De Propriedades</h3>
               </div>
             </div>
           </div>

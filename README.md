@@ -1,70 +1,55 @@
-# Getting Started with Create React App
+# 🌾 **e-commerce de Fazendas** 🌾
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Bem-vindo ao **e-commerce de fazendas**! O site oferece uma plataforma para visualizar e adquirir fazendas de forma simples e intuitiva. Aqui você encontra diversas fazendas em todo o Brasil, com informações detalhadas e imagens.
 
-## Available Scripts
+## 🧑‍💻 **Tecnologias Usadas** 🚀
 
-In the project directory, you can run:
+Este projeto foi desenvolvido com as seguintes tecnologias:
 
-### `npm start`
+- **React** 🖥️
+- **React Router** 🌐
+- **Tailwind CSS** 🎨
+- **JavaScript (ES6+)** ⚡
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 💡 **Funcionalidades** 💡
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+O site permite:
 
-### `npm test`
+- Visualização de fazendas em miniaturas 📸
+- Acesso a páginas detalhadas de cada fazenda 🌳
+- Exibição de vídeos de apresentação 📹
+- Contato direto com corretores via WhatsApp 📱
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🏡 **Visão Geral** 🌍
 
-### `npm run build`
+A página inicial oferece uma introdução sobre o mercado de fazendas e links para navegar no catálogo de fazendas disponíveis. As seções incluem:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **Hero Section** 🎯
+- **Descrição da Empresa** 🏢
+- **Quem Somos** 👥
+- **Nossos Serviços** 🛠️
+- **Estatísticas** 📊
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 📋 **Home Page** 🏠
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Na página inicial, você encontrará um belo fundo gradiente que dá destaque aos nossos valores de **cultivar negócios** e **semear confiança**.
 
-### `npm run eject`
+### 📚 **Catálogo de Fazendas** 🗂️
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+As fazendas estão listadas com imagens, preços e descrições detalhadas. Clicando nas miniaturas, você será redirecionado para uma página com mais informações sobre a fazenda, como a localização, área e infraestrutura.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 📝 **Detalhes das Fazendas** 🌿
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Cada fazenda possui:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- **Imagem Principal** 📸
+- **Galeria de Imagens** 🖼️
+- **Descrição Completa** 📜
+- **Infraestrutura** 🏠
+- **Vídeo de Apresentação** 🎥
 
-## Learn More
+## 🔧 **Instruções para Desenvolvimento** 🛠️
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/seu-usuario/e-commerce-fazendas.git

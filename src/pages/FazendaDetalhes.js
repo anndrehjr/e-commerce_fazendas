@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect, useRef } from "react"
 import { useParams } from "react-router-dom"
 
 const fazendasMock = [
@@ -14,7 +14,7 @@ const fazendasMock = [
     area: 500,
     infraestrutura: ["Casa sede", "Galpões", "Sistema de irrigação"],
     imagens: ["/fazendas/1.jpg", "/fazendas/2.jpeg", "/fazendas/3.jpeg", "/fazendas/4.jpg", "/fazendas/5.jpg"],
-    video: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    video: "/fazendas/1.webm",
   },
   {
     id: 2,
@@ -27,13 +27,32 @@ const fazendasMock = [
     infraestrutura: ["Casa sede", "Galpões", "Sistema de irrigação"],
     imagens: ["/fazendas/4.jpg", "/fazendas/5.jpg", "/fazendas/6.jpg", "/fazendas/7.jpg", "/fazendas/8.jpg"],
   }
-  // Adicione mais fazendas aqui...
 ]
 
 const FazendaDetalhes = () => {
   const { id } = useParams()
   const fazenda = fazendasMock.find((f) => f.id === Number.parseInt(id))
   const [imagemPrincipal, setImagemPrincipal] = useState(fazenda?.imagemPrincipal || "/placeholder.svg")
+  const videoRef = useRef(null)
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          videoRef.current?.play()
+        } else {
+          videoRef.current?.pause()
+        }
+      },
+      { threshold: 0.5 } // Quando 50% do vídeo estiver visível, ele inicia
+    )
+
+    if (videoRef.current) {
+      observer.observe(videoRef.current)
+    }
+
+    return () => observer.disconnect()
+  }, [])
 
   if (!fazenda) {
     return <div className="text-center text-red-500 font-bold text-lg">Fazenda não encontrada</div>
@@ -101,7 +120,7 @@ const FazendaDetalhes = () => {
           </ul>
           <button
             onClick={handleWhatsAppClick}
-            className="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded"
+            className="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded "
           >
             Falar com o corretor
           </button>
@@ -111,15 +130,14 @@ const FazendaDetalhes = () => {
       <div className="mt-8">
         <h3 className="text-2xl font-bold mb-4">Vídeo de apresentação</h3>
         {fazenda.video && (
-          <div className="aspect-w-16 aspect-h-9">
-            <iframe
-              src={fazenda.video}
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-              className="w-full h-full rounded-lg"
-              title="Vídeo de apresentação"
-            ></iframe>
-          </div>
+          <video
+            ref={videoRef}
+            src={fazenda.video}
+            loop
+            muted
+            className="w-full h-full rounded-lg"
+            controls
+          />
         )}
       </div>
     </div>
@@ -127,4 +145,3 @@ const FazendaDetalhes = () => {
 }
 
 export default FazendaDetalhes
-

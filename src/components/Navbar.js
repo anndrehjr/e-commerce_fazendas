@@ -1,7 +1,7 @@
 "use client"
 
-import { useState } from "react"
-import { Link } from "react-router-dom"
+import { useState, useEffect } from "react"
+import { Link, useLocation, useNavigate } from "react-router-dom"
 import { FaBars, FaTimes, FaUser, FaHome, FaList, FaEnvelope } from "react-icons/fa"
 
 const navItems = [
@@ -13,16 +13,39 @@ const navItems = [
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const location = useLocation()
+  const navigate = useNavigate()
+
+  useEffect(() => {
+    if (location.hash) {
+      const id = location.hash.replace("#", "")
+      setTimeout(() => {
+        const element = document.getElementById(id)
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" })
+        }
+      }, 0)
+    }
+  }, [location])
 
   const handleNavClick = (id) => {
     setIsMenuOpen(false)
-    if (id === "catalogo") {
-      // Navegar para a página de catálogo
-      window.location.href = "/catalogo"
-    } else {
-      const element = document.getElementById(id)
-      if (element) {
-        element.scrollIntoView({ behavior: "smooth" })
+    if (id === "inicio") {
+      if (location.pathname === "/") {
+        window.scrollTo({ top: 0, behavior: "smooth" })
+      } else {
+        navigate("/", { state: { fadeIn: true } })
+      }
+    } else if (id === "catalogo") {
+      navigate("/catalogo", { state: { fadeIn: true } })
+    } else if (id === "sobre" || id === "contato") {
+      if (location.pathname !== "/") {
+        navigate(`/#${id}`, { state: { fadeIn: true } })
+      } else {
+        const element = document.getElementById(id)
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" })
+        }
       }
     }
   }

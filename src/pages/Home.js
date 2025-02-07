@@ -1,7 +1,6 @@
-"use client";
-
-import React from "react";
-import { Link } from "react-router-dom";
+"use client"
+import { Link } from "react-router-dom"
+import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaFacebook, FaInstagram, FaWhatsapp } from "react-icons/fa"
 
 // Componente reutilizável para os cards de serviço
 const ServiceCard = ({ imageSrc, alt, title, description, buttonLabel, buttonClass, extraBorder }) => (
@@ -10,24 +9,20 @@ const ServiceCard = ({ imageSrc, alt, title, description, buttonLabel, buttonCla
       extraBorder ? "border-4 border-yellow-300" : ""
     }`}
   >
-    <img src={imageSrc} alt={alt} className="w-full h-48 object-cover "  />
+    <img src={imageSrc || "/placeholder.svg"} alt={alt} className="w-full h-48 object-cover" />
     <div className="p-6">
       <h3 className="text-2xl font-bold mb-2">{title}</h3>
       <p className="mb-4 text-gray-700">{description}</p>
       <button className={buttonClass}>{buttonLabel}</button>
     </div>
   </div>
-  
-);
+)
 
 const Home = () => {
   return (
     <div className="min-h-screen">
       {/* Seção Início */}
-      <section
-        id="inicio"
-        className="relative h-screen bg-gradient-to-br from-green-800 via-green-600 to-yellow-500"
-      >
+      <section id="inicio" className="relative h-screen bg-gradient-to-br from-green-800 via-green-600 to-yellow-500">
         <div className="absolute inset-0 bg-black/30" />
         <div className="relative container mx-auto px-4 h-full flex flex-col justify-center items-center text-center">
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
@@ -51,8 +46,8 @@ const Home = () => {
           <div className="flex flex-col md:flex-row gap-12">
             <div className="flex-1">
               <p className="text-xl mb-4">
-                A Fazendas Premium é especializada na comercialização de ativos rurais e estruturação de
-                negócios em todo o Brasil.
+                A Fazendas Premium é especializada na comercialização de ativos rurais e estruturação de negócios em
+                todo o Brasil.
               </p>
               <p className="text-xl">
                 Somos uma consultoria especializada na compra, venda, avaliação e estruturação de negócios envolvendo
@@ -102,8 +97,49 @@ const Home = () => {
           </div>
         </div>
       </section>
-    </div>
-  );
-};
 
-export default Home;
+      {/* Nova seção de Contatos (Footer) */}
+      <section id="contato" className="bg-green-900 text-white py-16">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold mb-8 text-center">
+            <span className="text-yellow-300">Entre em</span> Contato
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="flex flex-col items-center">
+              <FaPhone className="text-4xl mb-4 text-yellow-300" />
+              <h3 className="text-xl font-semibold mb-2">Telefone</h3>
+              <p>(XX) XXXX-XXXX</p>
+            </div>
+            <div className="flex flex-col items-center">
+              <FaEnvelope className="text-4xl mb-4 text-yellow-300" />
+              <h3 className="text-xl font-semibold mb-2">E-mail</h3>
+              <p>contato@fazendaspremium.com</p>
+            </div>
+            <div className="flex flex-col items-center">
+              <FaMapMarkerAlt className="text-4xl mb-4 text-yellow-300" />
+              <h3 className="text-xl font-semibold mb-2">Endereço</h3>
+              <p>Rua das Fazendas, 123 - Cidade, Estado</p>
+            </div>
+          </div>
+          <div className="mt-12 flex justify-center space-x-6">
+            <a href="#" className="text-3xl hover:text-yellow-300 transition-colors">
+              <FaFacebook />
+            </a>
+            <a href="#" className="text-3xl hover:text-yellow-300 transition-colors">
+              <FaInstagram />
+            </a>
+            <a href="#" className="text-3xl hover:text-yellow-300 transition-colors">
+              <FaWhatsapp />
+            </a>
+          </div>
+          <div className="mt-8 text-center">
+            <p>&copy; 2023 Fazendas Premium. Todos os direitos reservados.</p>
+          </div>
+        </div>
+      </section>
+    </div>
+  )
+}
+
+export default Home
+

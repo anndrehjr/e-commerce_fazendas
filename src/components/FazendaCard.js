@@ -15,7 +15,9 @@ const FazendaCard = ({ fazenda }) => {
           <p className="text-green-600 font-bold">R$ {fazenda.preco.toLocaleString()}</p>
         </div>
       </div>
+      
     </Link>
+
   )
 }
 

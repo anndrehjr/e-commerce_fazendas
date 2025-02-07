@@ -10,13 +10,14 @@ const ServiceCard = ({ imageSrc, alt, title, description, buttonLabel, buttonCla
       extraBorder ? "border-4 border-yellow-300" : ""
     }`}
   >
-    <img src={imageSrc} alt={alt} className="w-full h-48 object-cover" />
+    <img src={imageSrc} alt={alt} className="w-full h-48 object-cover "  />
     <div className="p-6">
       <h3 className="text-2xl font-bold mb-2">{title}</h3>
       <p className="mb-4 text-gray-700">{description}</p>
       <button className={buttonClass}>{buttonLabel}</button>
     </div>
   </div>
+  
 );
 
 const Home = () => {
